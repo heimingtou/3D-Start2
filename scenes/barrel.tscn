@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bw3haw7ulvb34"]
+
+[ext_resource type="PackedScene" path="res://scenes/base_character.tscn" id="1_1ywul"]
+[ext_resource type="Script" uid="uid://dq76ehjdf871j" path="res://scenes/enemies/barrel/barrel.gd" id="2_043oi"]
+[ext_resource type="Texture2D" uid="uid://8xv3tso56oou" path="res://assets/monsters/barrel/barrel_sprite_sheet.png" id="3_4ucd5"]
+[ext_resource type="AnimationLibrary" uid="uid://s0xkp2t7er6t" path="res://scenes/enemies/barrel/barrel_anims.tres" id="4_bdev8"]
+[ext_resource type="Script" uid="uid://bec57758p7ipw" path="res://scripts/node3d_factory.gd" id="5_61w87"]
+[ext_resource type="PackedScene" uid="uid://ctys44sfapfqa" path="res://scenes/barrel_bullet.tscn" id="6_ete54"]
+[ext_resource type="Script" uid="uid://b4xu38uqs2tyb" path="res://scenes/enemies/barrel/state/idle.gd" id="7_5rfk5"]
+[ext_resource type="Script" uid="uid://ofedsbaclfls" path="res://scenes/enemies/barrel/state/shoot.gd" id="8_dmctp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jpyye"]
+radius = 0.55
+height = 1.5
+
+[node name="Barrel" unique_id=857801287 instance=ExtResource("1_1ywul")]
+collision_layer = 8
+script = ExtResource("2_043oi")
+bullet_speed = 12.0
+
+[node name="Sprite3D" parent="." index="0"]
+offset = Vector2(0, 15.5)
+texture = ExtResource("3_4ucd5")
+hframes = 3
+vframes = 9
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries/ = ExtResource("4_bdev8")
+
+[node name="BulletFactory" type="Marker3D" parent="Direction" index="0" unique_id=1479024616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0.8)
+script = ExtResource("5_61w87")
+product_packed_scene = ExtResource("6_ete54")
+target_container_name = &"Bullets"
+metadata/_custom_type_script = "uid://bec57758p7ipw"
+
+[node name="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_jpyye")
+
+[node name="Idle" type="Node" parent="States" index="0" unique_id=1517822217]
+script = ExtResource("7_5rfk5")
+
+[node name="Shoot" type="Node" parent="States" index="1" unique_id=105699616]
+script = ExtResource("8_dmctp")
