@@ -98,4 +98,5 @@ script = ExtResource("15_throw")
 [node name="HoldPoint" type="Marker3D" parent="." index="5" unique_id=583087062]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
 
+[connection signal="animation_finished" from="AnimationPlayer" to="States/Attack" method="_on_animation_player_animation_finished"]
 [connection signal="hurt" from="Direction/HurtArea3D" to="." method="_on_hurt_area_3d_hurt"]
