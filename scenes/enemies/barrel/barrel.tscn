@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://8xv3tso56oou" path="res://assets/monsters/barrel/barrel_sprite_sheet.png" id="3_4ucd5"]
 [ext_resource type="AnimationLibrary" uid="uid://s0xkp2t7er6t" path="res://scenes/enemies/barrel/barrel_anims.tres" id="4_bdev8"]
 [ext_resource type="Script" uid="uid://bec57758p7ipw" path="res://scripts/node3d_factory.gd" id="5_61w87"]
-[ext_resource type="PackedScene" uid="uid://ctys44sfapfqa" path="res://scenes/barrel_bullet.tscn" id="6_ete54"]
+[ext_resource type="PackedScene" uid="uid://ctys44sfapfqa" path="res://scenes/enemies/barrel/barrel_bullet.tscn" id="6_ete54"]
 [ext_resource type="Script" uid="uid://b4xu38uqs2tyb" path="res://scenes/enemies/barrel/state/idle.gd" id="7_5rfk5"]
 [ext_resource type="Script" uid="uid://ofedsbaclfls" path="res://scenes/enemies/barrel/state/shoot.gd" id="8_dmctp"]
 

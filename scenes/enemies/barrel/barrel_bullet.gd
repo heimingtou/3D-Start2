@@ -4,11 +4,11 @@ extends RigidBody3D
 
 func _ready() -> void:
 	$HitArea3D.hitted. connect(_on_hitted)
-	body_entered. connect(_on_body_entered)
+	#body_entered. connect(_on_body_entered)
 	get_tree().create_timer(lifetime).timeout.connect(queue_free)
 
 func _on_hitted(_area: Area3D) -> void:
 	queue_free()
 
-func _on_body_entered(_body: Node3D) -> void:
-	queue_free()
+#func _on_body_entered(_body: Node3D) -> void:
+	#queue_free()

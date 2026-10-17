@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bhy2jt26n1gwm"]
+
+[ext_resource type="PackedScene" uid="uid://bw3haw7ulvb34" path="res://scenes/enemies/barrel/barrel.tscn" id="1_ndtsn"]
+[ext_resource type="Script" uid="uid://cvrerkjpc3lfl" path="res://scenes/enemies/barrel/barrel_rotate.gd" id="2_d7721"]
+[ext_resource type="Script" uid="uid://bfnqxf1e11ol5" path="res://scenes/enemies/barrel/shoot_rotate.gd" id="3_66b55"]
+
+[node name="Barrel_Rotate" unique_id=857801287 instance=ExtResource("1_ndtsn")]
+script = ExtResource("2_d7721")
+
+[node name="Shoot" parent="States" index="1" unique_id=105699616]
+script = ExtResource("3_66b55")
+shoot_delay = 0.0
+bullet_shoot = 3.0

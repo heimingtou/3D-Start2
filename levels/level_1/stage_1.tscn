@@ -2,6 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://ohm3771jyopt" path="res://assets/meshes/forest_library.meshlib" id="1_cpvyx"]
 [ext_resource type="MeshLibrary" uid="uid://c5r3h833h76js" path="res://assets/meshes/block_library.meshlib" id="2_juhly"]
+[ext_resource type="PackedScene" uid="uid://bw3haw7ulvb34" path="res://scenes/enemies/barrel/barrel.tscn" id="3_7xf2g"]
 [ext_resource type="MeshLibrary" uid="uid://cqdu8ans36vgx" path="res://assets/meshes/object_library.meshlib" id="3_l0tc7"]
 [ext_resource type="PackedScene" uid="uid://cmmjhllqibaoc" path="res://scenes/objects/palm_tree.tscn" id="4_7xf2g"]
 [ext_resource type="PackedScene" uid="uid://dp10o3xl1y7fw" path="res://scenes/player/player.tscn" id="5_nmkvs"]
@@ -44,8 +45,12 @@ data = {
 mesh_library = ExtResource("2_juhly")
 cell_center_y = false
 data = {
-"cells": PackedInt32Array(65539, 12, 0, 65541, 13, 0, 65543, 12, 0, 65544, 10, 1, 65545, 10, 1, 131081, 10, 0)
+"cells": PackedInt32Array(65539, 12, 0, 65541, 13, 0, 65543, 12, 0, 65544, 10, 1, 65545, 10, 1, 131081, 10, 0, 131073, 65535, 0, 131074, 65535, 0, 131075, 65535, 0, 131076, 65535, 0, 131077, 65535, 0, 131078, 65535, 0, 131079, 65535, 0, 131080, 65535, 0, 131082, 65535, 0, 131081, 65535, 0, 131083, 65534, 0, 131083, 65535, 0, 131084, 65535, 0, 131085, 65535, 0, 131087, 65535, 0, 131086, 65535, 0, 196609, 65535, 0, 196610, 65535, 0, 196611, 65535, 0, 196612, 65535, 0, 196613, 65535, 0, 196614, 65535, 0, 196616, 65535, 0, 196615, 65535, 0, 196617, 65535, 0, 196618, 65535, 0, 196619, 65535, 0, 196621, 65535, 0, 196620, 65535, 0, 196622, 65534, 0, 196622, 65535, 0, 196623, 65535, 0, 196608, 65535, 0, 65537, 65535, 0, 65538, 65535, 0, 65539, 65535, 0, 65540, 65535, 0, 65541, 65535, 0, 65543, 65535, 0, 65542, 65535, 0, 65544, 65535, 0, 65545, 65535, 0, 65546, 65535, 0, 65548, 65535, 0, 65549, 65535, 0, 65550, 65535, 0, 65551, 65535, 0, 131057, 23, 0, 131057, 24, 0, 131056, 24, 0, 131056, 25, 0, 131055, 26, 0, 131055, 27, 0, 131054, 27, 0, 131054, 28, 0, 131054, 29, 0, 131053, 30, 0, 131052, 31, 0, 131052, 32, 0, 131052, 33, 0, 131051, 33, 0, 131051, 34, 0, 131051, 35, 0, 65551, 15, 0, 65550, 15, 0, 65549, 15, 0, 65548, 15, 0, 65547, 15, 0, 65546, 15, 0, 65545, 15, 0, 65544, 15, 0, 65544, 14, 0, 65543, 14, 0, 65542, 14, 0, 65541, 14, 0, 65540, 13, 0, 65540, 14, 0, 65539, 13, 0, 65538, 13, 0, 65538, 12, 0, 65538, 11, 0, 131087, 15, 0, 131086, 15, 0, 131085, 15, 0, 131085, 14, 0, 131084, 15, 0, 131084, 14, 0, 131083, 15, 0, 131082, 15, 0, 131081, 15, 0, 131080, 15, 0, 131080, 14, 0, 131080, 13, 0, 131079, 13, 0, 131078, 13, 0, 131078, 12, 0, 131077, 12, 0, 131076, 12, 0, 131076, 11, 0)
 }
+metadata/_editor_floor_ = Vector3(0, 2, 0)
+
+[node name="Barrel" parent="." unique_id=857801287 instance=ExtResource("3_7xf2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.502438, 6.8767605, 10.191463)
 
 [node name="Objects" type="GridMap" parent="." unique_id=1736938449]
 mesh_library = ExtResource("3_l0tc7")
@@ -86,3 +91,5 @@ environment = SubResource("Environment_e0w38")
 
 [node name="Mushroom" parent="." unique_id=329432326 instance=ExtResource("8_juhly")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.748938, 1.4040699, 25.537945)
+
+[node name="Bullets" type="Node3D" parent="." unique_id=1275435284]

@@ -7,8 +7,9 @@
 [ext_resource type="PackedScene" path="res://scenes/camera/camera_rig.tscn" id="4_jenrn"]
 [ext_resource type="PackedScene" uid="uid://ixnvko75l4s1" path="res://scenes/mushroom.tscn" id="5_uofsi"]
 [ext_resource type="PackedScene" uid="uid://wrnpfl21d316" path="res://scenes/trap.tscn" id="6_jenrn"]
-[ext_resource type="PackedScene" uid="uid://bw3haw7ulvb34" path="res://scenes/barrel.tscn" id="8_mm0ke"]
+[ext_resource type="PackedScene" uid="uid://bw3haw7ulvb34" path="res://scenes/enemies/barrel/barrel.tscn" id="8_mm0ke"]
 [ext_resource type="PackedScene" uid="uid://cafv37vlga7nj" path="res://scenes/enemies/starfish/starfish.tscn" id="9_ymr3d"]
+[ext_resource type="PackedScene" uid="uid://bhy2jt26n1gwm" path="res://scenes/enemies/barrel/barrel_rotate.tscn" id="10_5fw7c"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_mm0ke"]
 size = Vector3(24, 1, 24)
@@ -90,6 +91,7 @@ shadow_enabled = true
 environment = SubResource("Environment_rj716")
 
 [node name="Bullets" type="Node3D" parent="." unique_id=480643604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2311583, 0)
 
 [node name="Mushroom" parent="." unique_id=329432326 instance=ExtResource("5_uofsi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1283684, 0)
@@ -100,5 +102,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
 [node name="Barrel" parent="." unique_id=857801287 instance=ExtResource("8_mm0ke")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2707992, 1.6136379, 4.5998545)
 
+[node name="Barrel2" parent="." unique_id=1461253811 instance=ExtResource("8_mm0ke")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.870709, 2.8817234, 0)
+
 [node name="starfish" parent="." unique_id=540654279 instance=ExtResource("9_ymr3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4842634, 1.8722944, 3.8881059)
+
+[node name="Barrel_Rotate" parent="." unique_id=941622764 instance=ExtResource("10_5fw7c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.128919, 2.9837818, 0)

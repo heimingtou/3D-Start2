@@ -1,0 +1,14 @@
+extends EnemyCharacter
+
+@export var bullet_speed: float = 12.0
+@onready var bullet_factory: Node3DFactory = $Direction/BulletFactory
+
+
+func _ready() -> void:
+	fsm = FSM.new(self, $States, $States/Idle)
+	super._ready()
+
+## Spawns a bullet at the muzzle then pushes it along the facing direction.
+func fire(angle:float) -> void:
+	var bullet := bullet_factory.create() as RigidBody3D
+	bullet.apply_impulse(forward().rotated(Vector3.UP,deg_to_rad(angle)) * bullet_speed)

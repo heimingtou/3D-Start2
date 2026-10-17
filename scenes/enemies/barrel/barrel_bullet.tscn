@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://b8dbnog54f7et" path="res://assets/monsters/barrel/barrel_bullet.png" id="2_22xb4"]
 [ext_resource type="Script" uid="uid://bvv36o7f0oebf" path="res://scripts/hit_area_3d.gd" id="3_qkmrh"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fcs02"]
+bounce = 0.8
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_orua6"]
 radius = 0.2
 
@@ -12,6 +15,7 @@ radius = 0.3
 
 [node name="BarrelBullet" type="RigidBody3D" unique_id=258108627]
 collision_layer = 32
+physics_material_override = SubResource("PhysicsMaterial_fcs02")
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 1

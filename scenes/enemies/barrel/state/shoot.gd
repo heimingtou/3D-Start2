@@ -20,6 +20,7 @@ func _update(delta: float) -> void:
 	if _count_bullet>0:
 		_fire_timer -= delta
 		if _fire_timer <= 0.0:
+			
 			obj.fire()
 			_count_bullet-=1
 			_fire_timer=shoot_delay
