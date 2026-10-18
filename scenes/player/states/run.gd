@@ -1,7 +1,10 @@
 extends PlayerState
 
 func _enter() -> void:
-	obj.change_animation("run")
+	if obj.is_hold:
+		obj.change_animation("carry_run")
+	else:
+		obj.change_animation("run")
 
 func _update(delta: float):
 	if control_attack():

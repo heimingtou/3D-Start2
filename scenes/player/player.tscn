@@ -23,6 +23,9 @@ height = 1.6
 [sub_resource type="BoxShape3D" id="BoxShape3D_jpyye"]
 size = Vector3(1.6, 1.6, 1.6)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2r8f5"]
+size = Vector3(5, 2, 5)
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
 radius = 0.7998047
 height = 1.6977539
@@ -64,6 +67,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 1)
 shape = SubResource("BoxShape3D_jpyye")
 disabled = true
 
+[node name="Area3D" type="Area3D" parent="Direction" index="2" unique_id=400135216]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Direction/Area3D" index="0" unique_id=655815239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_2r8f5")
+
 [node name="CollisionShape3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.84887695, 0)
 shape = SubResource("CapsuleShape3D_body")
@@ -96,7 +105,9 @@ script = ExtResource("14_carry")
 script = ExtResource("15_throw")
 
 [node name="HoldPoint" type="Marker3D" parent="." index="5" unique_id=583087062]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3551574, 0.27179098)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="States/Attack" method="_on_animation_player_animation_finished"]
 [connection signal="hurt" from="Direction/HurtArea3D" to="." method="_on_hurt_area_3d_hurt"]
+[connection signal="body_entered" from="Direction/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Direction/Area3D" to="." method="_on_area_3d_body_exited"]

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://xhkihsv74mso"]
 
-[ext_resource type="PackedScene" uid="uid://deu4tnx5mbuie" path="res://scenes/crab.tscn" id="1_jenrn"]
+[ext_resource type="PackedScene" uid="uid://deu4tnx5mbuie" path="res://scenes/enemies/crab/crab.tscn" id="1_jenrn"]
 [ext_resource type="PackedScene" uid="uid://cmmjhllqibaoc" path="res://scenes/objects/palm_tree.tscn" id="1_ry45r"]
 [ext_resource type="PackedScene" path="res://scenes/objects/bush.tscn" id="2_dsb46"]
 [ext_resource type="PackedScene" uid="uid://dp10o3xl1y7fw" path="res://scenes/player/player.tscn" id="3_uofsi"]
 [ext_resource type="PackedScene" path="res://scenes/camera/camera_rig.tscn" id="4_jenrn"]
-[ext_resource type="PackedScene" uid="uid://ixnvko75l4s1" path="res://scenes/mushroom.tscn" id="5_uofsi"]
+[ext_resource type="PackedScene" uid="uid://ixnvko75l4s1" path="res://scenes/enemies/mushroom/mushroom.tscn" id="5_uofsi"]
 [ext_resource type="PackedScene" uid="uid://wrnpfl21d316" path="res://scenes/trap.tscn" id="6_jenrn"]
 [ext_resource type="PackedScene" uid="uid://bw3haw7ulvb34" path="res://scenes/enemies/barrel/barrel.tscn" id="8_mm0ke"]
 [ext_resource type="PackedScene" uid="uid://bihyg8igvc43f" path="res://scenes/enemies/barrel/barrel_wait.tscn" id="9_7y2ik"]
@@ -95,7 +95,7 @@ environment = SubResource("Environment_rj716")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2311583, 0)
 
 [node name="Mushroom" parent="." unique_id=329432326 instance=ExtResource("5_uofsi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1283684, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3567696, 6.142206, -1.8937778)
 
 [node name="Trap" parent="." unique_id=836991536 instance=ExtResource("6_jenrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)

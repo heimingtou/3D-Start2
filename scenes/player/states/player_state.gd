@@ -56,3 +56,11 @@ func take_damage(damage: int = 1) -> void:
 		change_state(fsm.states.dead)
 	else:
 		change_state(fsm.states.hurt)
+		
+func control_carry()->bool:
+	
+	if Input.is_action_just_pressed("carry"):
+		
+		change_state(fsm.states.carry)
+		return true
+	return false

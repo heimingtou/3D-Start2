@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dp10o3xl1y7fw" path="res://scenes/player/player.tscn" id="5_nmkvs"]
 [ext_resource type="PackedScene" path="res://scenes/camera/camera_rig.tscn" id="6_aov85"]
 [ext_resource type="PackedScene" uid="uid://65gpamtlsq5j" path="res://scenes/objects/sea_water.tscn" id="7_66bjg"]
-[ext_resource type="PackedScene" uid="uid://ixnvko75l4s1" path="res://scenes/mushroom.tscn" id="8_juhly"]
+[ext_resource type="PackedScene" uid="uid://ixnvko75l4s1" path="res://scenes/enemies/mushroom/mushroom.tscn" id="8_juhly"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y6x6r"]
 sky_horizon_color = Color(0.72, 0.85, 0.93, 1)

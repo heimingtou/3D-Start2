@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crba8uk4ubhxl"]
 
-[ext_resource type="PackedScene" uid="uid://ixnvko75l4s1" path="res://scenes/mushroom.tscn" id="1_05kqa"]
+[ext_resource type="PackedScene" uid="uid://ixnvko75l4s1" path="res://scenes/enemies/mushroom/mushroom.tscn" id="1_05kqa"]
 [ext_resource type="MeshLibrary" uid="uid://ohm3771jyopt" path="res://assets/meshes/forest_library.meshlib" id="1_civo8"]
 [ext_resource type="MeshLibrary" uid="uid://cqdu8ans36vgx" path="res://assets/meshes/object_library.meshlib" id="2_vjarl"]
 [ext_resource type="MeshLibrary" uid="uid://c5r3h833h76js" path="res://assets/meshes/block_library.meshlib" id="3_05kqa"]

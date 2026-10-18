@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://426h18n834gy" path="res://scenes/enemies/mushroom/mushroom.gd" id="2_6c3h1"]
 [ext_resource type="Texture2D" uid="uid://d1bmdoh4let33" path="res://assets/monsters/mushroom/mushroom_sprite_sheet.png" id="3_f4pa7"]
 [ext_resource type="Script" uid="uid://bohu6lp14ew0u" path="res://scenes/enemies/states/run.gd" id="4_6c3h1"]
+[ext_resource type="Script" uid="uid://bxhejtsedqln7" path="res://scenes/enemies/mushroom/carried.gd" id="5_0ra7h"]
+[ext_resource type="Script" uid="uid://bjkwbddc7e7el" path="res://scenes/enemies/mushroom/throw.gd" id="6_1lu8u"]
 
 [sub_resource type="Animation" id="Animation_jekqn"]
 length = 0.001
@@ -30,6 +32,74 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_1lu8u"]
+resource_name = "idle_down"
+length = 1.4333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 3, 9, 0]
+}
+
+[sub_resource type="Animation" id="Animation_pdypp"]
+resource_name = "idle_left"
+length = 1.4333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 3, 9, 0]
+}
+
+[sub_resource type="Animation" id="Animation_ysheg"]
+resource_name = "idle_right"
+length = 1.4333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 3, 9, 0]
+}
+
+[sub_resource type="Animation" id="Animation_0ra7h"]
+resource_name = "idle_up"
+length = 1.4333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 3, 9, 0]
 }
 
 [sub_resource type="Animation" id="Animation_6rddh"]
@@ -127,6 +197,10 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vfc76"]
 _data = {
 &"RESET": SubResource("Animation_jekqn"),
+&"idle_down": SubResource("Animation_1lu8u"),
+&"idle_left": SubResource("Animation_pdypp"),
+&"idle_right": SubResource("Animation_ysheg"),
+&"idle_up": SubResource("Animation_0ra7h"),
 &"run_down": SubResource("Animation_6rddh"),
 &"run_left": SubResource("Animation_2v15d"),
 &"run_right": SubResource("Animation_0rtbm"),
@@ -162,3 +236,9 @@ shape = SubResource("CapsuleShape3D_orua6")
 
 [node name="Run" type="Node" parent="States" index="0" unique_id=325823187]
 script = ExtResource("4_6c3h1")
+
+[node name="Carried" type="Node" parent="States" index="1" unique_id=655557292]
+script = ExtResource("5_0ra7h")
+
+[node name="Throw" type="Node" parent="States" index="2" unique_id=79311507]
+script = ExtResource("6_1lu8u")
