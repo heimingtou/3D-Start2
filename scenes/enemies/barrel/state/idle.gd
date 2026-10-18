@@ -11,3 +11,4 @@ func _enter() -> void:
 func _update(delta: float) -> void:
 	if update_timer(delta):
 		change_state(fsm.states.shoot)
+		

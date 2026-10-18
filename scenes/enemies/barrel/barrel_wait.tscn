@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bihyg8igvc43f"]
+
+[ext_resource type="PackedScene" uid="uid://bw3haw7ulvb34" path="res://scenes/enemies/barrel/barrel.tscn" id="1_27roy"]
+[ext_resource type="Script" uid="uid://di8tb6jn1dtm3" path="res://scenes/enemies/barrel/idle_barrel_wait.gd" id="2_hsuae"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jpyye"]
+size = Vector3(1, 2, 8)
+
+[node name="Barrel_wait" unique_id=857801287 instance=ExtResource("1_27roy")]
+
+[node name="DetectPlayerArea3D" type="Area3D" parent="Direction" index="1" unique_id=1389226728]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Direction/DetectPlayerArea3D" index="0" unique_id=1800673685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)
+shape = SubResource("BoxShape3D_jpyye")
+
+[node name="Idle" parent="States" index="0" unique_id=1517822217]
+script = ExtResource("2_hsuae")
+
+[node name="Shoot" parent="States" index="1" unique_id=105699616]
+bullet_shoot = 1.0
