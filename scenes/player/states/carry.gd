@@ -17,7 +17,7 @@ func _enter() -> void:
 	lift_tween.set_ease(Tween.EASE_OUT)
 	lift_tween.set_trans(Tween.TRANS_QUAD)
 	lift_tween.tween_property(obj.held, "position", Vector3.ZERO, 0.18)
-	
+	obj.change_animation("carry")
 	# Khi tween chạy xong (hết 0.18 giây) thì mở khóa cho phép di chuyển và nhận input trở lại
 	
 	
@@ -42,7 +42,11 @@ func _update(_delta: float) -> void:
 		obj.held.be_throw(throw_dir)
 		obj.is_hold=false
 		change_state(fsm.states.throw)
-	control_moving()
+	var is_moving=move_by_input(0.6)
+	if is_moving:
+		obj.change_animation("carry_run")
+	else:
+		obj.change_animation("carry")
 	
 	#Do nothing while still lifting
 	#If "carry" is pressed -> obj.held.be_thrown(...), obj.held = null, then switch to state Throw

@@ -4,7 +4,7 @@ func _enter() -> void:
 	obj.change_animation("run")
 
 func _update(_delta: float) -> void:
-	var step: Vector3 = obj. forward() * obj.movement_speed
+	var step: Vector3 = obj.forward() * obj.movement_speed
 	obj.velocity.x = step.x
 	obj. velocity.z = step.z
 	if _should_turn_around():

@@ -1,10 +1,8 @@
 extends PlayerState
 
 func _enter() -> void:
-	if obj.is_hold:
-		obj.change_animation("carry_idle")
-	else:
-		obj.change_animation("idle")
+
+	obj.change_animation("idle")
 
 # scenes/player/states/idle.gd
 func _update(_delta: float) -> void:
