@@ -6,6 +6,8 @@ func _enter() -> void:
 func _update(delta: float):
 	if control_attack():
 		return
+	if control_shoot():
+		return
 	if control_jump():
 		return
 	if not control_moving():

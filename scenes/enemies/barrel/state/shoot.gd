@@ -13,8 +13,7 @@ func _enter() -> void:
 	_has_fired = false
 	_fire_timer = shoot_delay
 # Length taken from the animation itself - see the same kind of notein the fox's Attack state.
-	timer = obj.anim_player.get_animation("shoot_%s" %
-obj.direction). length
+	timer = obj.anim_player.get_animation("shoot_%s" %obj.direction).length
 
 func _update(delta: float) -> void:
 	if _count_bullet>0:

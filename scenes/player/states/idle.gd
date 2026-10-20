@@ -8,6 +8,8 @@ func _enter() -> void:
 func _update(_delta: float) -> void:
 	if control_attack():
 		return
+	if control_shoot():
+		return
 	control_carry()
 	control_jump()
 	control_moving()

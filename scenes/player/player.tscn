@@ -8,13 +8,16 @@
 [ext_resource type="Script" uid="uid://coy8holsj103m" path="res://scripts/hurt_area_3d.gd" id="5_ugbui"]
 [ext_resource type="Script" uid="uid://kx1fr4p8vy0f" path="res://scenes/player/states/run.gd" id="6_run"]
 [ext_resource type="Script" uid="uid://dpcr7kcoh7xdh" path="res://scenes/player/states/jump.gd" id="7_jump"]
+[ext_resource type="Script" uid="uid://bec57758p7ipw" path="res://scripts/node3d_factory.gd" id="7_kvlxm"]
 [ext_resource type="Script" uid="uid://cqn00yvsknulb" path="res://scenes/player/states/fall.gd" id="8_fall"]
+[ext_resource type="PackedScene" uid="uid://dnnfefg1sdw53" path="res://scenes/player/player_bullet.tscn" id="8_uf5tr"]
 [ext_resource type="Script" uid="uid://e18al3cgjb1u" path="res://scenes/player/states/attack.gd" id="9_attack"]
 [ext_resource type="Script" uid="uid://mrv6n5qxlyls" path="res://scenes/player/states/hurt.gd" id="10_hurt"]
 [ext_resource type="Script" uid="uid://duv4if3ceujbj" path="res://scenes/player/states/dead.gd" id="11_dead"]
 [ext_resource type="Script" uid="uid://to03pbynjbtu" path="res://scenes/player/states/carry.gd" id="14_carry"]
 [ext_resource type="Script" uid="uid://bvv36o7f0oebf" path="res://scripts/hit_area_3d.gd" id="15_fcs02"]
 [ext_resource type="Script" uid="uid://dta71g715vcmo" path="res://scenes/player/states/throw.gd" id="15_throw"]
+[ext_resource type="Script" uid="uid://ba5hpkwwf42w4" path="res://scenes/player/shoot.gd" id="18_uf5tr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jpyye"]
 radius = 0.6
@@ -34,6 +37,7 @@ height = 1.6977539
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("2_player")
+bullet_speed = 12.0
 movement_speed = 5.0
 
 [node name="Sprite3D" parent="." index="0"]
@@ -46,7 +50,13 @@ frame = 16
 [node name="AnimationPlayer" parent="." index="1"]
 libraries/ = ExtResource("4_anims")
 
-[node name="HurtArea3D" type="Area3D" parent="Direction" index="0" unique_id=1328789067]
+[node name="BulletFactory" type="Marker3D" parent="Direction" index="0" unique_id=797554523]
+script = ExtResource("7_kvlxm")
+product_packed_scene = ExtResource("8_uf5tr")
+target_container_name = &"Bullets"
+metadata/_custom_type_script = "uid://bec57758p7ipw"
+
+[node name="HurtArea3D" type="Area3D" parent="Direction" index="1" unique_id=1328789067]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("5_ugbui")
@@ -56,7 +66,7 @@ metadata/_custom_type_script = "uid://coy8holsj103m"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("CapsuleShape3D_jpyye")
 
-[node name="HitArea3D" type="Area3D" parent="Direction" index="1" unique_id=262757337]
+[node name="HitArea3D" type="Area3D" parent="Direction" index="2" unique_id=262757337]
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("15_fcs02")
@@ -67,7 +77,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 1)
 shape = SubResource("BoxShape3D_jpyye")
 disabled = true
 
-[node name="Area3D" type="Area3D" parent="Direction" index="2" unique_id=400135216]
+[node name="Area3D" type="Area3D" parent="Direction" index="3" unique_id=400135216]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Direction/Area3D" index="0" unique_id=655815239]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -103,6 +113,9 @@ script = ExtResource("14_carry")
 
 [node name="Throw" type="Node" parent="States" index="8" unique_id=2076786822]
 script = ExtResource("15_throw")
+
+[node name="Shoot" type="Node" parent="States" index="9" unique_id=1930968644]
+script = ExtResource("18_uf5tr")
 
 [node name="HoldPoint" type="Marker3D" parent="." index="5" unique_id=583087062]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3551574, 0.27179098)

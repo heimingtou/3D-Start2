@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dnnfefg1sdw53"]
+
+[ext_resource type="PackedScene" uid="uid://ctys44sfapfqa" path="res://scenes/enemies/barrel/barrel_bullet.tscn" id="1_altju"]
+[ext_resource type="Script" uid="uid://c0rxfmw7ncili" path="res://scenes/player/player_bullet.gd" id="2_2kcj1"]
+[ext_resource type="Texture2D" uid="uid://cetkk4cwo2028" path="res://assets/foxy/fox_hat/field_slot_02.png" id="3_fgkn0"]
+
+[node name="PlayerBullet" unique_id=258108627 instance=ExtResource("1_altju")]
+script = ExtResource("2_2kcj1")
+lifetime = 2.0
+
+[node name="Sprite3D" parent="." index="0" unique_id=2104960933]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+texture = ExtResource("3_fgkn0")
+
+[node name="HitArea3D" parent="." index="2" unique_id=53097148]
+collision_mask = 16

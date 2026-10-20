@@ -1,6 +1,7 @@
 class_name Player
 extends BaseCharacter
-
+@export var bullet_speed: float = 12.0
+@onready var bullet_factory: Node3DFactory = $Direction/BulletFactory
 ## Turned on throughout the Hurt state so one hit doesn't drain health every single frame in a row.
 var is_invulnerable: bool = false
 var held: Node3D=null
@@ -34,3 +35,7 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body == held and not is_hold:
 		held=null
 	pass # Replace with function body.
+func fire() -> void:
+	print("fire")
+	var bullet := bullet_factory.create() as RigidBody3D
+	bullet.apply_impulse(forward()*bullet_speed)
