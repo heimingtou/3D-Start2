@@ -42,7 +42,7 @@ func _update(_delta: float) -> void:
 		obj.held.be_throw(throw_dir)
 		obj.is_hold=false
 		change_state(fsm.states.throw)
-	var is_moving=move_by_input(0.6)
+	var is_moving=move_by_input(obj.held.hold_speed)
 	if is_moving:
 		obj.change_animation("carry_run")
 	else:

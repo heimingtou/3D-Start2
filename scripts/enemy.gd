@@ -55,6 +55,19 @@ func is_touch_wall() -> bool:
 
 func is_can_fall() -> bool:
 	return down_ray_cast != null and not down_ray_cast.is_colliding()
+	
+#func is_touch_enemy()->bool:
+	#if front_ray_cast!=null and front_ray_cast.is_colliding():
+		#var colide= front_ray_cast.get_collider()
+		#if colide.has_method("take_damage"):
+			#colide.take_damage()
+			#return front_ray_cast.is_colliding()
+	#if down_ray_cast != null and down_ray_cast.is_colliding():
+		#var colide= down_ray_cast.get_collider()
+		#if colide.has_method("take_damage"):
+			#return front_ray_cast.is_colliding()
+	#return false
+	#
 
 
 func enable_check_player_in_sight() -> void:

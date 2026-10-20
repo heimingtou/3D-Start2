@@ -9,7 +9,7 @@ func _enter() -> void:
 
 func _update(delta: float) -> void:
 	if obj. found_player != null:
-		obj. change_direction(BaseCharacter.direction_to(obj.global_position, obj. found_player. global_position))
+		obj. change_direction(BaseCharacter.direction_to(obj.global_position, obj. found_player.global_position))
 		change_state(fsm.states.shoot)
 		return
 		

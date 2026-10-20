@@ -96,7 +96,7 @@ environment = SubResource("Environment_rj716")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2311583, 0)
 
 [node name="Mushroom" parent="." unique_id=329432326 instance=ExtResource("5_uofsi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3567696, 6.142206, -1.8937778)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2143745, 3.808878, 9.225161)
 
 [node name="Trap" parent="." unique_id=836991536 instance=ExtResource("6_jenrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)

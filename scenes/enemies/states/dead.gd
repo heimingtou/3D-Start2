@@ -10,7 +10,7 @@ func _enter() -> void:
 
 func _update(delta: float) -> void:
 	if update_timer(delta):
-		obj. queue_free()
+		obj.queue_free()
 
 func take_damage(_damage_dir: Vector3, _damage: float) -> void:
 	pass

@@ -8,7 +8,7 @@ func _update(_delta: float) -> void:
 	obj.velocity.x = step.x
 	obj. velocity.z = step.z
 	if _should_turn_around():
-		obj. turn_around()
+		obj.turn_around()
 
 func _should_turn_around() -> bool:
 	if obj.is_touch_wall():

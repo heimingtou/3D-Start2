@@ -41,6 +41,35 @@ tracks/1/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_i42oo"]
+resource_name = "fly_down"
+length = 0.56666666
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_vr358"), ExtResource("3_bmy0r"), ExtResource("4_2chkd"), ExtResource("5_d6m5r")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_uckb8"]
 resource_name = "fly_left"
 length = 0.56666666
@@ -99,6 +128,63 @@ tracks/1/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_7fm61"]
+resource_name = "fly_up"
+length = 0.56666666
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_vr358"), ExtResource("3_bmy0r"), ExtResource("4_2chkd"), ExtResource("5_d6m5r")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_g51u2"]
+resource_name = "shoot_down"
+length = 0.56666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_8et0h"), ExtResource("8_2wr8p"), ExtResource("9_i42oo")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_6861i"]
 resource_name = "shoot_left"
 length = 0.56666666
@@ -155,13 +241,45 @@ tracks/1/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_4r0r2"]
+resource_name = "shoot_up"
+length = 0.56666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_8et0h"), ExtResource("8_2wr8p"), ExtResource("9_i42oo")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8et0h"]
 _data = {
 &"RESET": SubResource("Animation_8mv74"),
+&"fly_down": SubResource("Animation_i42oo"),
 &"fly_left": SubResource("Animation_uckb8"),
 &"fly_right": SubResource("Animation_xvggs"),
+&"fly_up": SubResource("Animation_7fm61"),
+&"shoot_down": SubResource("Animation_g51u2"),
 &"shoot_left": SubResource("Animation_6861i"),
-&"shoot_right": SubResource("Animation_jaktw")
+&"shoot_right": SubResource("Animation_jaktw"),
+&"shoot_up": SubResource("Animation_4r0r2")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uckb8"]
